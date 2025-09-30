@@ -48,6 +48,8 @@ DEFINE_uint32(val_loss_every, 0, "every how many steps to evaluate val loss?");
 DEFINE_uint32(sample_every, 0, "how often to sample from the model?");
 // debugging
 DEFINE_bool(overfit_single_batch, true, "overfit just one batch of data");
+// flash_attention
+DEFINE_bool(flash, false, "Enable FlashAttention (true/false), default=false");
 // memory management
 DEFINE_string(device, "cuda", "device type (cpu/cuda), useless if data_parallel=true");
 // parallel
