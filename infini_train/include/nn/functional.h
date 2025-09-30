@@ -169,14 +169,10 @@ std::shared_ptr<Tensor> Stack(const std::vector<std::shared_ptr<Tensor>> &inputs
 
 //
 //
-std::shared_ptr<Tensor> ScaledDotProductAttention(
-    const std::shared_ptr<Tensor>& q,
-    const std::shared_ptr<Tensor>& k,
-    const std::shared_ptr<Tensor>& v,
-    const std::shared_ptr<Tensor>& attn_mask = nullptr,
-    int64_t /*dim*/ = -1,
-    bool is_causal = true,
-    std::optional<double> scale = std::nullopt,
-    bool enable_gqa = false);
+std::shared_ptr<Tensor> ScaledDotProductAttention(const std::shared_ptr<Tensor> &q, const std::shared_ptr<Tensor> &k,
+                                                  const std::shared_ptr<Tensor> &v,
+                                                  const std::shared_ptr<Tensor> &attn_mask = nullptr,
+                                                  int64_t /*dim*/ = -1, bool is_causal = true,
+                                                  std::optional<double> scale = std::nullopt, bool enable_gqa = false);
 
 } // namespace infini_train::nn::function
